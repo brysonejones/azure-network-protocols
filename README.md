@@ -29,25 +29,31 @@ In this tutorial, I observed various network traffic to and from Azure Virtual M
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+This first screenshot is where in Microsoft Azure I created 2 Virtual Machines.
+<img width="1697" alt="Azure VMs creation" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/b88eb3fa-60d9-4ab2-8ccb-d459849b6902">
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Here is where I connected to the Windows 10 VM using a Remote Desktop connection.
+<img width="1710" alt="RDP-login" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/7c127e3e-a1af-4b42-b518-b492d6fbc8fc">
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Inside the Windows VM I then downloaded Wireshark, which is a protocol traffic analyzer.
+<img width="1710" alt="Wireshark Installation" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/a51e8698-5ff7-4d4f-86cd-41c8534a37a7">
+
+I first filtered for ICMP traffic and then used a ping command in powershell to test network connectivity to the Ubuntu VM.
+<img width="1710" alt="ICMP traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/169850b7-23f2-4a4f-a3bb-19abb753cd10">
+
+These two screenshots are of me experimenting with the Network Security Groups of the Ubuntu VM. I disabled incoming ICMP traffic on the firewall of the Ubuntu VM so that the Windows VM cound not receive any ping reply. I then immediately allowed the ICMP traffic again.
+<img width="1710" alt="NSG experiment" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/c4dd0a4e-d7b8-4a3d-87fd-5432b52e3f6f">
+<img width="1710" alt="NSG experiment -2" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/f2273a83-f087-4853-b7ab-45df0bdea5c0">
+
+Filtered for SSH traffic.
+<img width="1710" alt="SSH traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/149a346e-afbd-42e3-908a-75d4c51604aa">
+
+Filtered for DHCP traffic.
+<img width="1710" alt="DHCP traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/5c0c352c-71c8-4430-a18a-0b76dfeae9e5">
+
+Filtered for DNS traffic. I viewed the IP addresses of www.google.com and disney.com in powershell.
+<img width="1710" alt="DNS traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/22fda6b3-71e2-4c14-aabf-45688321ccbe">
+
+The last protocol traffic I viewed was RDP. You can't tell by the picture but the traffic was continously moving since the connection is live from my physical laptop to the Windows 10 VM.
+<img width="1710" alt="RDP traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/4f189a02-0e42-481d-8a0a-f3ec67d8ae2d">
