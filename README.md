@@ -54,7 +54,7 @@ Filtered for SSH traffic.
 <img width="1710" alt="SSH traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/149a346e-afbd-42e3-908a-75d4c51604aa">
 </p>
 <br />
-Filtered for DHCP traffic.
+Filtered for DHCP traffic. I used the ipconfig /renew command to issue the VM a new IP address.
 <img width="1710" alt="DHCP traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/5c0c352c-71c8-4430-a18a-0b76dfeae9e5">
 </p>
 <br />
