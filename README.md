@@ -41,7 +41,7 @@ Inside the Windows VM I then downloaded Wireshark, which is a protocol traffic a
 <img width="1710" alt="Wireshark Installation" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/a51e8698-5ff7-4d4f-86cd-41c8534a37a7">
 </p>
 <br />
-I first filtered for ICMP traffic and then used a ping command in powershell to test network connectivity to the Ubuntu VM.
+I first filtered for ICMP traffic and then used a ping command in powershell to test network connectivity to the Ubuntu VM and Internet by pinging Google.
 <img width="1710" alt="ICMP traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/169850b7-23f2-4a4f-a3bb-19abb753cd10">
 </p>
 <br />
@@ -50,7 +50,7 @@ These two screenshots are of me experimenting with the Network Security Groups o
 <img width="1710" alt="NSG experiment -2" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/f2273a83-f087-4853-b7ab-45df0bdea5c0">
 </p>
 <br />
-Filtered for SSH traffic.
+Filtered for SSH traffic. I spawned the command line for the Ubuntu VM. I tested it by using the Linux commands "uname -a" and "pwd".
 <img width="1710" alt="SSH traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/149a346e-afbd-42e3-908a-75d4c51604aa">
 </p>
 <br />
@@ -58,7 +58,7 @@ Filtered for DHCP traffic. I used the ipconfig /renew command to issue the VM a 
 <img width="1710" alt="DHCP traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/5c0c352c-71c8-4430-a18a-0b76dfeae9e5">
 </p>
 <br />
-Filtered for DNS traffic. I viewed the IP addresses of www.google.com and disney.com in powershell.
+Filtered for DNS traffic. I viewed the IP addresses of www.google.com and disney.com in powershell by using the "nslookup" command.
 <img width="1710" alt="DNS traffic view" src="https://github.com/brysonejones/azure-network-protocols/assets/163891519/22fda6b3-71e2-4c14-aabf-45688321ccbe">
 </p>
 <br />
